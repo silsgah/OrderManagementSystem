@@ -23,6 +23,92 @@ A clean and modular Web API implementation for managing customer orders, applyin
 
 ---
 ### Project structure
+# Order Management System
+
+A minimal .NET 8 Web API project for managing customer orders with integrated discount logic. This project demonstrates clean architecture practices, strategy pattern for discount calculation, enum serialization, Swagger integration, and automated testing.
+
+---
+
+## ✅ Features
+
+- Create and retrieve customer orders
+- Apply dynamic discount strategies based on customer segment and history
+- Uses strategy pattern to support multiple discount logics (VIP, Loyal, etc.)
+- Enum serialization as strings via `JsonStringEnumConverter`
+- In-memory EF Core database
+- Swagger documentation with XML comments
+- Unit and integration tests
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+
+### Running the App
+```bash
+# Restore packages
+dotnet restore
+
+# Run the API
+dotnet run --project OrderManagementSystem
+```
+
+Visit `https://localhost:<port>/swagger` to test endpoints.
+
+---
+
+## 📦 API Endpoints
+
+### `POST /api/orders`
+Create a new order.
+- Request Body:
+```json
+{
+  "customerId": 1,
+  "totalAmount": 1000,
+  "createdAt": "2024-01-01T00:00:00Z",
+  "deliveredAt": "2024-01-01T00:30:00Z",
+  "status": "Pending"
+}
+```
+- Response: `201 Created`
+
+### `GET /api/orders/{id}`
+Retrieve an order by ID.
+- Response:
+```json
+{
+  "id": 1,
+  "customerId": 1,
+  "status": "Created",
+  "totalAmount": 950,
+  ...
+}
+```
+
+### `GET /api/orders/analytics`
+Returns order count and average amount per status.
+
+---
+
+## ✅ Testing
+
+Run tests using:
+```bash
+dotnet test
+```
+
+The project contains:
+- **Unit tests** (`DiscountServiceTests.cs`) to verify discount strategies
+- **Integration tests** (`OrderIntegrationTests.cs`) for full API flow
+
+---
+
+## 📁 Project Structure
+
+```bash
 OrderManagementSystem/
 ├── Controllers/
 │   └── OrdersController.cs            # Handles API endpoints for order operations
@@ -49,7 +135,14 @@ OrderManagementSystem/
 OrderManagementSystem.Tests/
 ├── DiscountServiceTests.cs            # Unit tests for DiscountService logic
 └── OrderIntegrationTests.cs           # Integration tests for order posting
+```
 
+---
+
+## 👨‍💻 Author
+Silas AWS
+
+Feel free to contribute or suggest improvements!
 
 ---
 ### technology used
