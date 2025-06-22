@@ -69,6 +69,7 @@ Update an order by ID.
 }
 
 ---
+
 ## ✅ 🚀 Performance Optimization
 This project implements in-memory caching to reduce redundant computations and improve response times:
 
@@ -84,6 +85,7 @@ Benefits
 🔁 Enhances scalability for high-traffic usage
 
 ⚡ Improves user experience with faster responses
+
 ---
 
 ## 📁 Project Structure
