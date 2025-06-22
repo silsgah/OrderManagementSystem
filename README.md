@@ -33,43 +33,23 @@ A clean and modular Web API implementation for managing customer orders, applyin
 
 ---
 
-## 📦 API Endpoints
+## ✅ 🚀 Performance Optimization
+This project implements in-memory caching to reduce redundant computations and improve response times:
 
-### `POST /api/orders`
-Create a new order.
-- Request Body:
-```json
-{
-  "customerId": 1,
-  "totalAmount": 950
-}
-```
-- Response: `201 Created`
+✅ IMemoryCache is injected into the DiscountService to cache discount calculations per customer.
 
-### `GET /api/orders/{id}`
-Retrieve an order by ID.
-- Response:
-```json
-{
-  "id": 1,
-  "customerId": 1,
-  "status": "Created",
-  "totalAmount": 950
-}
-```
-### `GET /api/orders/{id}`
-Update an order by ID.
-- Response:
-```json
-{
-  "id": 1,
-  "customerId": 1,
-  "status": "Completed",
-  "totalAmount": 950,
-}
+✅ The cache key is based on the customer ID to ensure scoped and relevant reuse.
+
+✅ This avoids recalculating discounts for frequent or returning users within the cache window.
+
+Benefits
+⏱️ Reduces CPU usage and DB load for repeated discount computations
+
+🔁 Enhances scalability for high-traffic usage
+
+⚡ Improves user experience with faster responses
 
 ---
-
 ## 📁 Project Structure
 
 ```bash
