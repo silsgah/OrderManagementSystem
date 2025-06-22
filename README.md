@@ -24,38 +24,32 @@ A clean and modular Web API implementation for managing customer orders, applyin
 ---
 ### Project structure
 OrderManagementSystem/
-│
 ├── Controllers/
-│   └── OrdersController.cs        # Handles API endpoints for order operations
-│
+│   └── OrdersController.cs            # Handles API endpoints for order operations
 ├── Data/
-│   └── ApplicationDbContext.cs    # In-memory EF Core DB context
-│
+│   └── ApplicationDbContext.cs        # In-memory EF Core DB context
 ├── Enum/
-│   └── CustomerSegment.cs         # Enum for customer segmentation
-│   └── OrderStatus.cs             # Enum for order lifecycle status
-│
+│   ├── CustomerSegment.cs             # Enum for customer segmentation
+│   └── OrderStatus.cs                 # Enum for order lifecycle status
 ├── Models/
-│   ├── Customer.cs                # Represents a customer
-│   └── Order.cs                   # Represents an order and relationship to customer
-│
+│   ├── Customer.cs                    # Represents a customer
+│   └── Order.cs                       # Represents an order and relationship to customer
 ├── Services/
-│   ├── IDiscountService.cs        # Interface for discount logic
-│   ├── DiscountService.cs         # Logic to choose appropriate discount strategy
-│   ├── Strategies/                # Contains different discount strategy implementations
+│   ├── IDiscountService.cs            # Interface for discount logic
+│   ├── DiscountService.cs             # Logic to choose appropriate discount strategy
+│   └── Strategies/                    # Contains different discount strategy implementations
 │       ├── VIPDiscountStrategy.cs
 │       ├── RegularDiscountStrategy.cs
 │       ├── PremiumDiscountStrategy.cs
 │       └── DiscountStrategyFactory.cs
-│
-├── Program.cs                     # Entry point with Swagger, JSON settings, seeding
-├── OrderManagementSystem.csproj   # Project definition
-└── README.md                      # 📘 Project documentation
+├── Program.cs                         # Entry point with Swagger, JSON settings, seeding
+├── OrderManagementSystem.csproj       # Project definition
+└── README.md                          # 📘 Project documentation
 
 OrderManagementSystem.Tests/
-│
-├── DiscountServiceTests.cs        # Unit tests for DiscountService logic
-└── OrderIntegrationTests.cs       # Integration tests for full order posting workflow
+├── DiscountServiceTests.cs            # Unit tests for DiscountService logic
+└── OrderIntegrationTests.cs           # Integration tests for order posting
+
 
 ---
 ### technology used
