@@ -70,24 +70,6 @@ Update an order by ID.
 
 ---
 
-## ✅ 🚀 Performance Optimization
-This project implements in-memory caching to reduce redundant computations and improve response times:
-
-✅ IMemoryCache is injected into the DiscountService to cache discount calculations per customer.
-
-✅ The cache key is based on the customer ID to ensure scoped and relevant reuse.
-
-✅ This avoids recalculating discounts for frequent or returning users within the cache window.
-
-Benefits
-⏱️ Reduces CPU usage and DB load for repeated discount computations
-
-🔁 Enhances scalability for high-traffic usage
-
-⚡ Improves user experience with faster responses
-
----
-
 ## 📁 Project Structure
 
 ```bash
