@@ -69,8 +69,10 @@ Update an order by ID.
   "totalAmount": 950,
   ...
 }
+
 ---
-🚀 Performance Optimization
+
+## 🚀 Performance Optimization
 This project implements in-memory caching to reduce redundant computations and improve response times:
 
 ✅ IMemoryCache is injected into the DiscountService to cache discount calculations per customer.
@@ -86,6 +88,7 @@ Benefits
 
 ⚡ Improves user experience with faster responses
 ---
+
 ## 📁 Project Structure
 
 ```bash
@@ -116,7 +119,6 @@ OrderManagementSystem.Tests/
 ├── DiscountServiceTests.cs            # Unit tests for DiscountService logic
 └── OrderIntegrationTests.cs           # Integration tests for order posting
 ```
-
 ---
 ### technology used
 | Technology            | Purpose                   |
