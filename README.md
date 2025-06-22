@@ -41,10 +41,7 @@ Create a new order.
 ```json
 {
   "customerId": 1,
-  "totalAmount": 1000,
-  "createdAt": "2024-01-01T00:00:00Z",
-  "deliveredAt": "2024-01-01T00:30:00Z",
-  "status": "Pending"
+  "totalAmount": 950
 }
 ```
 - Response: `201 Created`
@@ -61,7 +58,18 @@ Retrieve an order by ID.
   ...
 }
 ```
-
+### `GET /api/orders/{id}`
+Update an order by ID.
+- Response:
+```json
+{
+  "id": 1,
+  "customerId": 1,
+  "status": "Completed",
+  "totalAmount": 950,
+  ...
+}
+---
 ### `GET /api/orders/analytics`
 Returns order count and average amount per status.
 
