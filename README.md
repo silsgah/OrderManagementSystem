@@ -54,8 +54,7 @@ Retrieve an order by ID.
   "id": 1,
   "customerId": 1,
   "status": "Created",
-  "totalAmount": 950,
-  ...
+  "totalAmount": 950
 }
 ```
 ### `GET /api/orders/{id}`
@@ -67,7 +66,6 @@ Update an order by ID.
   "customerId": 1,
   "status": "Completed",
   "totalAmount": 950,
-  ...
 }
 
 ---
