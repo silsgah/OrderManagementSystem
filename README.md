@@ -70,10 +70,6 @@ Update an order by ID.
   ...
 }
 ---
-### `GET /api/orders/analytics`
-Returns order count and average amount per status.
-
----
 🚀 Performance Optimization
 This project implements in-memory caching to reduce redundant computations and improve response times:
 
